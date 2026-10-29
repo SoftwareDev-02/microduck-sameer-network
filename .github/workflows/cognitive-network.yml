@@ -1,0 +1,23 @@
+name: Cognitive network prototype tests
+on:
+  push:
+    branches: [main, 'feat/**']
+    paths:
+      - 'experiments/microduck-network/**'
+      - '.github/workflows/cognitive-network.yml'
+  pull_request:
+    paths:
+      - 'experiments/microduck-network/**'
+      - '.github/workflows/cognitive-network.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run simulation-only unit tests
+        run: python -m unittest discover -s experiments/microduck-network/tests -v
+      - name: Run demonstration
+        run: python experiments/microduck-network/demo.py

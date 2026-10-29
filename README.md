@@ -13,6 +13,8 @@
   <a href="docs/robot/cheatsheet.md">Cheat sheet</a> ·
   <a href="https://github.com/pollen-robotics/microduck_rl">Training the policies</a> ·
   <a href="docs/design/architecture.md">How it works</a> ·
+  <a href="docs/design/cognitive-network.md">Cognitive network proposal</a> ·
+  <a href="experiments/microduck-network/README.md">Multi-agent prototype</a> ·
   <a href="CONTRIBUTING.md">Contributing</a>
 </p>
 
